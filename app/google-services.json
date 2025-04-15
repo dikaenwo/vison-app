@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "775286382219",
+    "project_id": "campus-fire-guard",
+    "storage_bucket": "campus-fire-guard.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775286382219:android:a7b845e242dfd423d6fe8e",
+        "android_client_info": {
+          "package_name": "com.example.splashscreencampusfire"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCumAUN4cGVlSrDk0WCZD8MoUa3sfLs4Dg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
