@@ -56,8 +56,10 @@ public class MainActivity extends AppCompatActivity {
                         return;
                     }
 
+                    // Ambil token FCM
                     String token = task.getResult();
                     Log.d("FCM Token", token);
+                    // Simpan token di SharedPreferences atau server
                 });
 
         // Auto-refresh image setiap 2 detik
