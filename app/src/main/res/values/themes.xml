@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.SplashScreenCampusFire" parent="Base.Theme.SplashScreenCampusFire" />
+
 </resources>

@@ -1,10 +1,10 @@
 package com.example.splashscreencampusfire;
 
 import androidx.work.ListenableWorker;
-
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
@@ -17,11 +17,16 @@ import org.json.JSONObject;
 
 public class FireCheckWorker extends Worker {
     private static final String CHANNEL_ID = "fire_alert_channel";
-    private static final String STATUS_URL = "http://192.168.1.32:5000/status";
+    private String STATUS_URL;
 
     public FireCheckWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
         createNotificationChannel();
+
+        // Ambil IP dari SharedPreferences
+        SharedPreferences prefs = context.getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
+        String ipAddress = prefs.getString("ip_address", "192.168.1.1"); // Default jika belum di-set
+        STATUS_URL = "http://" + ipAddress + ":5000/status"; // Dinamis menggunakan IP
     }
 
     @NonNull
@@ -65,4 +70,3 @@ public class FireCheckWorker extends Worker {
         }
     }
 }
-
